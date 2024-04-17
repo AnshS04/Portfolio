@@ -10,21 +10,6 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/661fb41da0c6737bd12cf69f/1hrltf5hr";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
   <body>
     <!-- landing section -->
 
@@ -257,20 +242,19 @@
     </script>
 
     <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxWoN4uMrgfzp5H4tN3oGHyEP8wlODUpGQFiGTmmOduwyStUrN1JeGvhY48_br30m19/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxWoN4uMrgfzp5H4tN3oGHyEP8wlODUpGQFiGTmmOduwyStUrN1JeGvhY48_br30m19/exec";
       const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
+      const msg = document.getElementById("msg")
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             msg.innerHTML = "Message sent successfully!";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
+            setTimeout(function() {
+                msg.innerHTML = "";
+            }, 5000)
+            form.reset()
           })
           .catch((error) => console.error("Error!", error.message));
       });
