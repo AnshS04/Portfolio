@@ -27,11 +27,8 @@
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Web Developer</p>
-          <h1>
-            Hi, I'm <span> Ansh </span> Sachdeva, <br />
-            an IT Undergrad
-          </h1>
+          <p>Full Stack Developer</p>
+          <h1>Hi, I'm <span> Ansh </span> Sachdeva</h1>
         </div>
       </div>
     </div>
@@ -47,11 +44,11 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              I'm a final year student at Bharati Vidyapeeth's College of
-              Engineering, specializing in B.Tech in Information Technology. I'm
-              a web developer and programmer, with a knack for C++, and I'm also
-              a gaming enthusiast. As I approach graduation, I'm gearing up to
-              make waves in the tech world as a Software Engineer.
+              I am a graduate of GGSIPU with a B.Tech in Information
+              Technology. I'm a web developer and programmer with a knack for
+              C++, and I'm also a gaming enthusiast. As I embark on my
+              professional journey, I'm eager to make waves in the tech world as
+              a Software Engineer.
             </p>
 
             <div class="tab-titles">
@@ -80,11 +77,11 @@
             <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>March 2024 - Present</span><br />SDE intern at Truminds
+                  <span>March 2024 - July 2024</span><br />SDE intern at Truminds
                 </li>
                 <li>
                   <span>July 2022 - August 2022</span><br />Summer Intern at
-                  International Programmes, IIT Delhi
+                  International Programs, IIT Delhi
                 </li>
               </ul>
             </div>
@@ -92,7 +89,7 @@
             <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span>2020 - Present</span><br />B.Tech in IT from Bharati
+                  <span>2020 - 2024</span><br />B.Tech in IT from Bharati
                   Vidyapeeth's College of Engineering
                 </li>
                 <li>
@@ -117,6 +114,19 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
           <div class="work">
+            <img src="images/Chat.jpg" />
+            <div class="layer">
+              <h3>Chimes</h3>
+              <p>
+                Developed a real-time chat application using MERN and Socket.io.
+              </p>
+              <a href="https://github.com/AnshS04/Chat-app"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
             <img src="images/work-1.png" />
             <div class="layer">
               <h3>NotesVault</h3>
@@ -129,19 +139,8 @@
               ></a>
             </div>
           </div>
-          <div class="work">
-            <img src="images/work-2.jpg" />
-            <div class="layer">
-              <h3>NewsGen</h3>
-              <p>
-                Your go-to website for concise and up-to-date news from around
-                the world.
-              </p>
-              <a href="https://github.com/AnshS04/NewsGen-React"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </div>
-          </div>
+
+          
           <div class="work">
             <img src="images/work-3.jpg" />
             <div class="layer">
@@ -242,19 +241,20 @@
     </script>
 
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxWoN4uMrgfzp5H4tN3oGHyEP8wlODUpGQFiGTmmOduwyStUrN1JeGvhY48_br30m19/exec";
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxWoN4uMrgfzp5H4tN3oGHyEP8wlODUpGQFiGTmmOduwyStUrN1JeGvhY48_br30m19/exec";
       const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg")
+      const msg = document.getElementById("msg");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             msg.innerHTML = "Message sent successfully!";
-            setTimeout(function() {
-                msg.innerHTML = "";
-            }, 5000)
-            form.reset()
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
           })
           .catch((error) => console.error("Error!", error.message));
       });
